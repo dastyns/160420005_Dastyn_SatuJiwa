@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemActivity"
+        android:name="com.group.a160420005_satujiwa_uts.view.ActivityListFragment"
+        android:label="fragment_activity_list"
+        tools:layout="@layout/fragment_activity_list" >
+        <action
+            android:id="@+id/activity_to_detail"
+            app:destination="@id/activityDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemAkun"
+        android:name="com.group.a160420005_satujiwa_uts.view.AkunFragment"
+        android:label="fragment_akun"
+        tools:layout="@layout/fragment_akun">
+        <action
+            android:id="@+id/action_to_edit_akun"
+            app:destination="@id/edit_akun" />
+        <action
+            android:id="@+id/action__to_tentang_satuJiwa"
+            app:destination="@id/tentang_satuJiwa" />
+        <action
+            android:id="@+id/action_to_galang_dana"
+            app:destination="@id/galang_dana" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.group.a160420005_satujiwa_uts.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_to_itemActivity"
+            app:destination="@id/itemActivity" />
+        <action
+            android:id="@+id/action_itemHome_to_berita_terkini"
+            app:destination="@id/berita_terkini" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityDetailFragment"
+        android:name="com.group.a160420005_satujiwa_uts.view.ActivityDetailFragment"
+        android:label="fragment_activity_detail"
+        tools:layout="@layout/fragment_activity_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/edit_akun"
+        android:name="com.group.a160420005_satujiwa_uts.view.edit_akun"
+        android:label="fragment_edit_akun"
+        tools:layout="@layout/fragment_edit_akun" />
+    <fragment
+        android:id="@+id/tentang_satuJiwa"
+        android:name="com.group.a160420005_satujiwa_uts.view.tentang_satuJiwa"
+        android:label="fragment_tentang_satu_jiwa"
+        tools:layout="@layout/fragment_tentang_satu_jiwa" />
+    <fragment
+        android:id="@+id/galang_dana"
+        android:name="com.group.a160420005_satujiwa_uts.view.galang_dana_saya"
+        android:label="fragment_galang_dana_saya"
+        tools:layout="@layout/fragment_galang_dana_saya" />
+    <fragment
+        android:id="@+id/berita_terkini"
+        android:name="com.group.a160420005_satujiwa_uts.view.berita_terkini"
+        android:label="fragment_berita_terkini"
+        tools:layout="@layout/fragment_berita_terkini" />
+</navigation>

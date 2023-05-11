@@ -28,15 +28,6 @@ class ListViewActivityDetail(application: Application): AndroidViewModel(applica
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             {
-//                val sType = object : TypeToken<ArrayList<Aktivitas>>() { }.type
-//                val result = Gson().fromJson<ArrayList<Activity>>(it, sType)
-//                val daftar = result as ArrayList<Aktivitas>
-//                for(act in daftar){
-//                    if(act.id == idActivity){
-//                        activityDetailLD.value = act
-//                        break
-//                    }
-//                }
                 val result = Gson().fromJson<Aktivitas>(it, Aktivitas::class.java)
                 activityDetailLD.value = result
 
